@@ -13,10 +13,10 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
     navegarSignup() {
-        this.router.navigate(['signup']); // Navega para a rota '/login'
+        this.router.navigate(['signup']); 
   }
 
     entrarPainel() {
-      this.router.navigate(['painel']); // Navega para a rota '/login'
+      this.router.navigate(['painel']); 
   }
 }

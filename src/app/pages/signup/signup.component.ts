@@ -12,7 +12,7 @@ export class SignupComponent {
   constructor(private router: Router) {}
 
   navigateToLogin() {
-    this.router.navigate(['login']); // Navega para a rota '/login'
+    this.router.navigate(['login']); 
   }
 
 }

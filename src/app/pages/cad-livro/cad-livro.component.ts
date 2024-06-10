@@ -13,7 +13,7 @@ export class CadLivroComponent {
   constructor(private router: Router) {}
 
     navegarCadastrarLivro() {
-      this.router.navigate(['cad-livro']); // Navega para a rota '/home'
+      this.router.navigate(['cad-livro']); 
     }
   
 }

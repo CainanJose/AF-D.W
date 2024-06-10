@@ -1,0 +1,9 @@
+.sidebar {
+    width: 250px; /* Largura da barra lateral */
+  }
+  
+  .content {
+    flex: 1; /* O conteúdo ocupa o espaço restante */
+    padding: 20px; /* Adiciona um espaçamento interno para melhor visualização */
+  }
+  

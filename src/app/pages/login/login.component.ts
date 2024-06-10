@@ -15,4 +15,8 @@ export class LoginComponent {
     navegarSignup() {
         this.router.navigate(['signup']); // Navega para a rota '/login'
   }
+
+    entrarPainel() {
+      this.router.navigate(['painel']); // Navega para a rota '/login'
+  }
 }

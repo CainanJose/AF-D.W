@@ -15,4 +15,8 @@ export class LivroComponent {
   navTodosLivros() {
     this.router.navigate(['todos-livros']); // Navega para a rota '/login'
   }
+
+  navEditarLivro() {
+    this.router.navigate(['edit-livro']); // Navega para a rota '/login'
+  }
 }

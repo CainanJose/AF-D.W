@@ -13,6 +13,6 @@ export class ColecaoComponent {
   constructor(private router: Router) {}
 
   navTodosLivros() {
-    this.router.navigate(['todos-livros']); // Navega para a rota '/login'
+    this.router.navigate(['todos-livros']); 
   }
 }

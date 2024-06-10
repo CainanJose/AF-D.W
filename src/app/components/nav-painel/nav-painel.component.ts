@@ -30,5 +30,10 @@ export class NavPainelComponent {
   navegarEditar() {
     this.router.navigate(['editar']); // Navega para a rota '/home'
   }
+
+  navegarCadastrarLivro() {
+    this.router.navigate(['cad-livro']); // Navega para a rota '/home'
+  }
+
 }
 

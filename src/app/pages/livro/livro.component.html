@@ -1,31 +1,43 @@
 <app-nav-painel></app-nav-painel>
-<br/>
-<br/>
-<br/>
-<div class="card mb-3 container text-center " style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img
-          src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-          alt="Trendy Pants and Shoes"
-          class="img-fluid rounded-start"
-        />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Titulo</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="container mt-0">
+      <div class="card mb-3 container text-center " style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
+              alt="Trendy Pants and Shoes"
+              class="img-fluid rounded-start"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Titulo</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    
+      <div class="container text-center">
+        <button type="button" class="btn btn-primary m-3 " style="background-color: #0323b3;" data-mdb-ripple-init (click)="navTodosLivros()">Voltar</button>
+    
+         <button type="button" class="btn btn-primary m-3" style="background-color: #0323b3;" data-mdb-ripple-init (click)="navEditarLivro()">Editar</button>
+      </div>
     </div>
-  </div>
+  </body>
+</html>
 
-  <div class="container text-center">
-      <button type="button" class="btn btn-primary " style="background-color: #0323b3;" data-mdb-ripple-init (click)="navTodosLivros()">Voltar</button>
-  </div>

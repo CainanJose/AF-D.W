@@ -15,4 +15,9 @@ export class TodosLivrosComponent {
     navLivros() {
       this.router.navigate(['livro']);
     }
+
+    navColecao() {
+      this.router.navigate(['colecao']); 
+    }
+  
 }

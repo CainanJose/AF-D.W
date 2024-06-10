@@ -1,1 +1,55 @@
-<p>cad-livro works!</p>
+<app-nav-painel></app-nav-painel>
+
+<!DOCTYPE html>
+<section >
+    <div class="text-center my-4">
+            <h3>Adicionar livro</h3>
+    </div>
+      <div class="row gx-lg-5 align-items-center mb-5 justify-content-center ">
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+  
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1" class="form-control" />
+                      <label class="form-label" for="form3Example1">Titulo</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example2" class="form-control" />
+                      <label class="form-label" for="form3Example2">Autor</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example3" class="form-control" />
+                  <label class="form-label" for="form3Example3">Genero</label>
+                </div>
+  
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example4" class="form-control" />
+                  <label class="form-label" for="form3Example4">Descrição</label>
+                </div>
+  
+            
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4" (click)="navegarCadastrarLivro" >
+                  Salvar
+                </button>
+   
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Section: Design Block -->
+  

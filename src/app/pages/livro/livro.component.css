@@ -1,0 +1,10 @@
+body {
+    background-image: url("../../../assets/374b6cf334b911685e21b0e4b62dfd3e.jpg");
+    background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center center; /* Centraliza a imagem */
+    background-color: #cccccc; /* Cor de fundo como fallback */
+    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    
+}
+

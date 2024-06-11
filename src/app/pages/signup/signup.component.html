@@ -2,6 +2,16 @@
 <!DOCTYPE html>
 <section class="background-radial-gradient overflow-hidden">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+
+
+                <!-- resolver conflito nos botao login e voltar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <div class="text-home">
+          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating btn-lg gradient-custom-2 mb-3" type="button" style="border-radius: 50%;" (click)="navigateToLogin()">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+      
       <div class="row gx-lg-5 align-items-center mb-5">
         <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
           <h1>
@@ -19,44 +29,60 @@
               <div class="text-center">
                 <h3>Crie uma nova conta</h3>
               </div>
-              <form>
+              <form [formGroup]="signupForm">
 
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" />
+                      <input type="text" id="form3Example1" class="form-control" formControlName="nome" />
+                      <div *ngIf="signupForm.get('nome')?.invalid && (signupForm.get('nome')?.dirty || signupForm.get('nome')?.touched)">
+                        <div class="text-danger">Nome é obrigatório</div>
+                      </div>
                       <label class="form-label" for="form3Example1">Primeiro Nome</label>
                     </div>
                   </div>
+
+                  
                   <div class="col-md-6 mb-4">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" />
-                      <label class="form-label" for="form3Example2">Sobrenome</label>
+                      <input type="text" id="form3Example1" class="form-control" formControlName="sobrenome" />
+                      <div *ngIf="signupForm.get('sobrenome')?.invalid && (signupForm.get('sobrenome')?.dirty || signupForm.get('sobrenome')?.touched)">
+                        <div class="text-danger">Sobrenome é obrigatório</div>
+                      </div>
+                      <label class="form-label" for="form3Example1">Primeiro Nome</label>
                     </div>
                   </div>
                 </div>
   
                 <!-- Email input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
+                  <input type="email" id="form3Example3" class="form-control" formControlName="email" />
+                  <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                    <div class="text-danger">Email é obrigatório</div>
+                  </div>
                   <label class="form-label" for="form3Example3">Email</label>
                 </div>
   
                 <!-- Password input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
+                  <input type="password" id="form3Example4" class="form-control" formControlName="password" />
+                  <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+                    <div class="text-danger">Senha é obrigatório</div>
+                  </div>
                   <label class="form-label" for="form3Example4">Senha</label>
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
-                  <label class="form-label" for="form3Example4">Confirme sua senha</label>
+                  <input type="password" id="form3Example4" class="form-control" formControlName="confirmPassword" />
+                  <div *ngIf="signupForm.get('confirmPassword')?.invalid && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)">
+                    <div class="text-danger">Senha é obrigatório</div>
+                  </div>
+                  <label class="form-label" for="form3Example4">Confirmar senha</label>
                 </div>
-                <!-- Submit button -->
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4" (click)="navigateToLogin()">
+
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4" (click)="signup()">
                   Criar
                 </button>
-   
               </form>
             </div>
           </div>

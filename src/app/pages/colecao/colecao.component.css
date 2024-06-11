@@ -1,10 +1,35 @@
 body {
-    background-image: url("../../../assets/cb3cf51c8b13442524f773a6070f09c7.jpg");
+    background-image: url("../../../assets/home5.png");
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
     background-attachment: fixed;
     background-color: #cccccc; /* Cor de fundo como fallback */
-    min-height: 80vh; /* Garante altura mínima de 100% da viewport */
-    
+    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    font-family:  'Times New Roman', Times, serif; 
+    font-weight: bold;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 40%;
+  }
+
+  h3{
+    font-family:  'Times New Roman', Times, serif; 
+    font-size: 1.5em; /* Tamanho maior do texto */
+    color: #000000; /* Cor do texto */
+    letter-spacing: 4px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+    background-color: #ffffff;
+    margin-bottom: auto;
+  }
+  
+
+  
+
+  
+
+  

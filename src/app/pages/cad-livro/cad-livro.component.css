@@ -1,0 +1,20 @@
+body {
+    background-image: url("../../../assets/home2.png");
+    background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed;
+    background-color: #cccccc; /* Cor de fundo como fallback */
+    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    font-family:  'Times New Roman', Times, serif; 
+}
+
+h3{
+    font-family:  'Times New Roman', Times, serif; 
+    font-size: 2em; /* Tamanho maior do texto */
+    color: #000000; /* Cor do texto */
+    letter-spacing: 4px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+    background-color: #ffffff;
+}
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
@@ -10,13 +11,22 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private router: Router) {}
+
+  loginForm: FormGroup
+  constructor(private router: Router) {
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
+    })
+
+  }
 
     navegarSignup() {
         this.router.navigate(['signup']); 
   }
 
     entrarPainel() {
+      console.log(this.loginForm.value)
       this.router.navigate(['painel']); 
   }
 }

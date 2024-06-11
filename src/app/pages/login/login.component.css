@@ -1,3 +1,8 @@
+body{
+    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    font-family:  'Times New Roman', Times, serif; 
+}
+
 .gradient-custom-2 {
     /* fallback for old browsers */
     background: #042db3de;

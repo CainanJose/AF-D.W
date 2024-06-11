@@ -1,17 +1,5 @@
 .background-radial-gradient {
-    background-color: hsl(218, 41%, 15%);
-    background-image: radial-gradient(650px circle at 0% 0%,
-        hsl(218, 41%, 35%) 15%,
-        hsl(218, 41%, 30%) 35%,
-        hsl(218, 41%, 20%) 75%,
-        hsl(218, 41%, 19%) 80%,
-        transparent 100%),
-      radial-gradient(1250px circle at 100% 100%,
-        hsl(218, 41%, 45%) 15%,
-        hsl(218, 41%, 30%) 35%,
-        hsl(218, 41%, 20%) 75%,
-        hsl(218, 41%, 19%) 80%,
-        transparent 100%);
+  background-image: url("../../../assets/home.png");
   }
   
   #radius-shape-1 {
@@ -38,3 +26,21 @@
     backdrop-filter: saturate(200%) blur(25px);
   }
   
+  h1{
+    font-family:  'Times New Roman', Times, serif; /* Use 'Boston Angel' se estiver disponível */
+    font-size: 4.5em; /* Tamanho maior do texto */
+    font-weight: bolder; /* Negrito mais forte */
+    color: #000000; /* Cor do texto */
+    text-transform: uppercase; /* Tudo em maiúsculas */
+    letter-spacing: 4.5px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 4px rgba(95, 95, 95, 0.4); /* Sombra do texto */
+  }
+  h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em; /* Tamanho padrão do texto */
+    color: #000000; /* Cor do texto */
+    line-height: 0.5; /* Altura da linha para melhor legibilidade */
+    text-transform: uppercase;
+    letter-spacing: 4.5px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }

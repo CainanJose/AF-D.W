@@ -1,9 +1,94 @@
-body {
-    background-image: url("../../../assets/3ea01414dbdc31cf547b7a4c8bf8668f.jpg");
-    background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-position: center center; /* Centraliza a imagem */
-    background-color: #cccccc; /* Cor de fundo como fallback */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
-    
-}
+.card-img-top {
+    border-radius: 70%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  
+  .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card-text {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .btn-floating {
+    display: inline-block;
+    margin: 2px;
+    transition: transform 0.2s;
+  }
+  
+  .btn-floating:hover {
+    transform: scale(1.1);
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  footer h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  footer p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .m-3 {
+    margin: 1rem !important;
+  }
+
+  h3 {
+    font-family:  'Times New Roman', Times, serif; 
+    font-size: 1.3em; /* Tamanho maior do texto */
+    color: #000000; /* Cor do texto */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+    background-color: #ffffff;
+    margin-bottom: auto;
+  }
+  

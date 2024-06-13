@@ -1,22 +1,15 @@
+<app-navbar></app-navbar>
+
 <!DOCTYPE html>
 <body>
 <section class="h-100 gradient-form" style="background-color: #eee;">
-    <div class="container py-5 h-100">
+    <div class="container py-2 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-xl-10">
-
-          <!-- resolver conflito nos botao login e voltar -->
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-          <div class="text-home">
-            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating btn-lg gradient-custom-2 mb-3" type="button" style="border-radius: 50%;" (click)="navegarHome()">
-              <i class="fas fa-arrow-left"></i>
-            </button>
-          </div>
-
+        <div class="col-xl-10" >
           <div class="card rounded-3 text-black">
             <div class="row g-0">
               <div class="col-lg-6">
-                  <div class="card-body p-md-5 mx-md-4">
+                  <div class="card-body md-5 mx-md-4">
   
                   <div class="text-center"> 
                     <img src="https://img.freepik.com/vetores-premium/vetor-de-icone-de-design-de-logotipo-de-livro_9850-5270.jpg"
@@ -24,41 +17,41 @@
                     <h3 class="mt-1 mb-5 pb-1">Book Shelf</h3>
                   </div>
   
-                  <form [formGroup]="loginForm">
-                    <p>Faça login em sua conta</p>
+                  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <div  class="text-center">
+                      <p>Faça login em sua conta</p>
+                    </div>
                     <br>
-                    <div data-mdb-input-init class="form-outline mb-4">
+                    <div data-mdb-input-init class="form-outline mb-2">
                       <input type="email" id="form2Example11" class="form-control" formControlName="email" placeholder="E-mail" />
                       <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
-                        <div class="text-danger">Email é obrigatório</div>
+                        <div class="text-danger" *ngIf="loginForm.get('email')?.errors?.['required']">Email é obrigatório</div>
+                        <div class="text-danger" *ngIf="loginForm.get('email')?.errors?.['email']">Email inválido</div> 
                       </div>
-                      <label class="form-label mt-1" for="form2Example11"></label> 
+                      <label class="form-label mt-1" for="form2Example11"></label>
                     </div>
                   
-                    <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="password" id="form2Example22" class="form-control" formControlName="password" placeholder="Senha"/>
+                    <div data-mdb-input-init class="form-outline mb-2">
+                      <input type="password" id="form2Example22" class="form-control" formControlName="password" placeholder="Senha" />
                       <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
-                        <div class="text-danger">Senha é obrigatório</div>
+                        <div class="text-danger">Senha é obrigatória</div>
                       </div>
                       <label class="form-label mt-1" for="form2Example22"></label>
                     </div>
-  
-                    <div class="text-center pt-1 mb-5 pb-1">
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="login()" [disabled]="!loginForm.valid">Login
-                      </button>
-                      <div *ngIf="invalidUser" class="alert alert-danger" role="alert">
+                  
+                    <div class="text-center pt-1 mb-2 pb-1">
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" [disabled]="!loginForm.valid">Login</button>
+                      <div *ngIf="invalidUser" class="alert alert-danger my-1" role="alert">
                         Email ou senha incorretos.
                       </div>
                     </div>
-
-
-  
+                  
                     <div class="d-flex align-items-center justify-content-center pb-4 ">
                       <p class="mb-0 me-2">Não tem uma conta?</p>
-                      <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary" (click)="navegarSignup()">Crie um novo</button>
+                      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary" (click)="navegarSignup()">Crie um novo</button>
                     </div>
-  
                   </form>
+                  
   
                 </div>
               </div>

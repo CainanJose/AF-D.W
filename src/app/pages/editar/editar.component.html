@@ -1,64 +1,65 @@
 <app-nav-painel></app-nav-painel>
+<section>
+  <div class="text-center">
+    <br>
+    <h3>Editar Usuario</h3>
+  </div>
 
-<!DOCTYPE html>
-<body>
-<section >
-    <div class="text-center my-4">
-      <br>
-            <h3>Editar Usuario</h3>
-    </div>
-      <div class="row gx-lg-5 align-items-center mb-5 justify-content-center ">
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-  
-          <div class="card bg-glass">
-            <div class="card-body px-4 py-5 px-md-5">
-              <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" />
-                      <label class="form-label" for="form3Example1">Nome</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" />
-                      <label class="form-label" for="form3Example2">Sobrenome</label>
-                    </div>
+  <div class="row gx-lg-5 align-items-center mb-1 justify-content-center">
+    <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+      <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+      <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+      <div class="card bg-glass">
+        <div class="card-body px-4 py-5 px-md-5">
+          <form [formGroup]="editForm" (ngSubmit)="onUpdate()">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="nome" class="form-control" formControlName="nome" />
+                  <label class="form-label" for="nome">Nome</label>
+                  <div class="text-danger" *ngIf="editForm.get('nome')?.invalid && (editForm.get('nome')?.dirty || editForm.get('nome')?.touched)">
+                    <div *ngIf="editForm.get('nome')?.errors?.['required']">Nome é obrigatório</div>
                   </div>
                 </div>
-  
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
-                  <label class="form-label" for="form3Example3">Email</label>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="sobrenome" class="form-control" formControlName="sobrenome"/>
+                  <label class="form-label" for="sobrenome">Sobrenome</label>
+                  <div class="text-danger" *ngIf="editForm.get('sobrenome')?.invalid && (editForm.get('sobrenome')?.dirty || editForm.get('sobrenome')?.touched)">
+                    <div *ngIf="editForm.get('sobrenome')?.errors?.['required']">Sobrenome é obrigatório</div>
+                  </div>
                 </div>
-  
-                <!-- Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
-                  <label class="form-label" for="form3Example4">Senha</label>
-                </div>
-                
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="form3Example4" class="form-control" />
-                    <label class="form-label" for="form3Example4">Confirme a senha</label>
-                </div>
-  
-                <!-- Submit button -->
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4" (click)="navPainel()">
-                  Salvar
-                </button>
-   
-              </form>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-  </section>
-</body>
 
-  
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="email" class="form-control" formControlName="email" />
+              <label class="form-label" for="email">Email</label>
+              <div class="text-danger" *ngIf="editForm.get('email')?.invalid && (editForm.get('email')?.dirty || editForm.get('email')?.touched)">
+                <div *ngIf="editForm.get('email')?.errors?.['required']">Email é obrigatório</div>
+                <div *ngIf="editForm.get('email')?.errors?.['email']">Email inválido</div>
+              </div>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="password" class="form-control" formControlName="password" placeholder="Senha deve conter entre 6 e 20 caracteres" />
+              <label class="form-label" for="password">Senha</label>
+              <div class="text-danger" *ngIf="editForm.get('password')?.invalid && (editForm.get('password')?.dirty || editForm.get('password')?.touched)">
+                <div *ngIf="editForm.get('password')?.errors?.['required']">Senha é obrigatória</div>
+                <div *ngIf="editForm.get('password')?.errors?.['minlength'] || editForm.get('password')?.errors?.['maxlength']">A senha deve ter entre 6 e 20 caracteres</div>
+              </div>
+            </div>
+            
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword" placeholder="Confirmar senha" />
+              <label class="form-label" for="confirmPassword">Confirmar senha</label>
+              <div class="text-danger" *ngIf="editForm.get('confirmPassword')?.invalid && (editForm.get('confirmPassword')?.dirty || editForm.get('confirmPassword')?.touched)">
+                <div *ngIf="editForm.get('confirmPassword')?.errors?.['required']">Confirmar senha é obrigatório</div>
+                <div *ngIf="editForm.get('confirmPassword')?.errors?.['notSame']">As senhas não coincidem</div>
+              </div>
+            </div>
+
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4" [disabled]="!editForm.valid">
+              Salvar

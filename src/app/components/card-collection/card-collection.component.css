@@ -1,0 +1,20 @@
+.collection-container{
+
+    padding: 8px;
+    width: 1fr;
+    height: 70px;
+    background-color:rgb(30, 75, 189) ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-link{
+    text-decoration: none;
+    color: white;
+}
+
+.collection-container:hover{
+    background-color:rgb(30, 133, 189) ;
+}

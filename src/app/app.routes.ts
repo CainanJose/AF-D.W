@@ -15,7 +15,13 @@ import { SupportePainelComponent } from './pages/supporte-painel/supporte-painel
 import { TodosLivrosComponent } from './pages/todos-livros/todos-livros.component';
 
 export const routes: Routes = [
-    {
+  
+  { 
+    path: 'users/:id', component: EditarComponent
+
+  },
+  {
+
     path: '',
     component: HomeComponent,
     pathMatch: 'full',

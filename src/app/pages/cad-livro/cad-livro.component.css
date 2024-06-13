@@ -5,7 +5,7 @@ body {
     background-position: center center; /* Centraliza a imagem */
     background-attachment: fixed;
     background-color: #cccccc; /* Cor de fundo como fallback */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 90vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
 }
 

@@ -1,5 +1,5 @@
 body{
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 89vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
 }
 
@@ -14,11 +14,7 @@ body{
     background: linear-gradient(to right, #040bca, #041bca, #042bca, #043bca);
     }
     
-    @media (min-width: 768px) {
-    .gradient-form {
-    height: 150vh !important;
-    }
-    }
+
     @media (min-width: 769px) {
     .gradient-custom-2 {
     border-top-right-radius: .3rem;

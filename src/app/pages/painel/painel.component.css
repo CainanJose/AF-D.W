@@ -1,9 +1,38 @@
-.sidebar {
-    width: 250px; /* Largura da barra lateral */
-  }
-  
-  .content {
-    flex: 1; /* O conteúdo ocupa o espaço restante */
-    padding: 20px; /* Adiciona um espaçamento interno para melhor visualização */
-  }
-  
+.painel-container{
+  margin: 20px;
+  padding: 20px;
+}
+
+.nav-painel{
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bem-vindo{
+  margin: 8px;
+  padding: 10px;
+}
+
+.title{
+  margin: 0;
+}
+
+.button-painel{
+  margin: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(30, 75, 189);
+}
+
+.collection-area{
+  margin: 8px;
+  padding: 8px;
+  background-color: rgb(187, 187, 187);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}

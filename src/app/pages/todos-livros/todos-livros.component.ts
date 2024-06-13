@@ -19,5 +19,9 @@ export class TodosLivrosComponent {
     navColecao() {
       this.router.navigate(['colecao']); 
     }
+
+    navegarCadastrarLivro() {
+      this.router.navigate(['cad-livro']); // Navega para a rota '/home'
+    }
   
 }

@@ -15,5 +15,8 @@ export class CadLivroComponent {
     navegarCadastrarLivro() {
       this.router.navigate(['cad-livro']); 
     }
-  
+    navTodosLivros() {
+      this.router.navigate(['todos-livros']); 
+    }
+
 }

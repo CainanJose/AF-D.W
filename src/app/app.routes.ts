@@ -13,6 +13,7 @@ import { CadLivroComponent } from './pages/cad-livro/cad-livro.component';
 import { SobrePainelComponent } from './pages/sobre-painel/sobre-painel.component';
 import { SupportePainelComponent } from './pages/supporte-painel/supporte-painel.component';
 import { TodosLivrosComponent } from './pages/todos-livros/todos-livros.component';
+import { AtuColecaoComponent } from './pages/atu-colecao/atu-colecao.component';
 
 export const routes: Routes = [
   
@@ -101,6 +102,12 @@ export const routes: Routes = [
   {
     path: 'todos-livros',
     component: TodosLivrosComponent,
+    pathMatch: 'full',
+  },
+
+  {
+    path: 'atu-colecao',
+    component: AtuColecaoComponent,
     pathMatch: 'full',
   }
 ];

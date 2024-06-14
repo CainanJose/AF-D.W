@@ -1,8 +1,53 @@
 <app-nav-painel></app-nav-painel>
 
+<main class="painel-container">
+    <div class="nav-painel">
+        <div class="bem-vindo">
+            <h3 class="title">Sua coleção!</h3>
+        </div>
+        <div class="nav-button">
+          <button class="button-painel" (click)="navAtuColecao()">Editar Coleção</button>
+      </div>
+        <div class="nav-button">
+            <button class="button-painel" (click)="navCadLivro()">Adicionar Livro</button>
+        </div>
+    </div>
+    
+    <div class="collection-area">
+        @for(books of listBooks; track books._id){
+            <app-card-book title={{books.title}} author={{books.author}} description={{books.description}} urlLink="livro"(booksClick)="minhaFuncao(books._id)"></app-card-book>
+        }
+
+    </div>
+    <div class="container text-center">
+      <button type="button" class="btn btn-primary m-3 " style="background-color: #0323b3;" data-mdb-ripple-init (click)="navPainel()">Voltar</button>
+  
+
+    </div>
+  
+    
+</main>
 
 
-<table class="table">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table class="table">
     <thead>
       <tr>
         <th scope="col">
@@ -58,4 +103,4 @@
     </button>
 
 
-  </div>
+  </div> -->

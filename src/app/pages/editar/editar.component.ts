@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavPainelComponent } from "../../components/nav-painel/nav-painel.component";
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-editar',
@@ -13,76 +14,54 @@ import { NavPainelComponent } from "../../components/nav-painel/nav-painel.compo
   styleUrls: ['./editar.component.css'],
   imports: [CommonModule, NavPainelComponent, FormsModule, ReactiveFormsModule]
 })
+
+
+
 export class EditarComponent implements OnInit {
+
+  user: any;
+
+
+  atuUser = {
+    name: '',
+    lastname:'',
+    email:'',
+    password:''
+     };
+
   editForm!: FormGroup;
   userId!: string;
   updateError: boolean = false;
   errorMessage: string = '';
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private fb: FormBuilder,
-    private http: HttpClient
-  ) {}
+  constructor(private service: UserService, private router: Router) {}
 
-  ngOnInit() {
-    this.editForm = this.fb.group({
-      nome: ['', Validators.required],
-      sobrenome: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]],
-      confirmPassword: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]]
-    }, { validators: this.checkPasswords });
-
-    // Obter o ID do usuário da URL
-    this.route.paramMap.subscribe(params => {
-      this.userId = params.get('id')!;
-      console.log('User ID:', this.userId);
-      if (this.userId) {
-        this.carregarDadosUsuario();
-      } else {
-        console.error('ID do usuário não fornecido na URL.');
-      }
+  ngOnInit(): void {
+    this.service.getUser().subscribe({
+      next: (res) => {
+        this.user = res;
+        
+        this.atuUser = {
+          name: this.user.name,
+          lastname: this.user.lastname,
+          email: this.user.email,
+          password: this.user.password
+        };
+        
+      },
+      error: (err) => console.error(err)
     });
   }
 
-  carregarDadosUsuario() {
-    this.http.get<any>(`http://localhost:3001/users/${this.userId}`)
-      .subscribe({
-        next: (userData) => {
-          this.editForm.patchValue({
-            nome: userData.nome,
-            sobrenome: userData.sobrenome,
-            email: userData.email
-          });
-        },
-        error: (error) => {
-          console.error('Erro ao buscar dados do usuário:', error);
-        }
-      });
+  atualizarUser():void { 
+    if (confirm('Deseja realmente atualizar este livro?')){
+    this.service.atualizaUser(this.atuUser)}
   }
 
-  checkPasswords(group: FormGroup) {
-    const password = group.get('password')?.value;
-    const confirmPassword = group.get('confirmPassword')?.value;
-    return password === confirmPassword ? null : { notSame: true };
+  deleteUser(): void{
+    if (confirm('Deseja realmente deletar este usuario?')){
+      this.service.deleteUser()}
   }
 
-  onUpdate() {
-    if (this.editForm.valid) {
-      const { confirmPassword, ...formData } = this.editForm.value;
-
-      this.http.patch(`http://localhost:3001/users/${this.userId}`, formData)
-        .subscribe({
-          next: () => {
-            this.router.navigateByUrl('/painel');
-          },
-          error: (error) => {
-            this.updateError = true;
-            this.errorMessage = error.error.message || 'Erro ao atualizar usuário';
-          }
-        });
-    }
-  }
+  
 }

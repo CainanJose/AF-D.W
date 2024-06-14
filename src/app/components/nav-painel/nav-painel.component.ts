@@ -24,7 +24,8 @@ export class NavPainelComponent {
   }
 
   navegarHome() {
-    this.router.navigate(['']); // Navega para a rota '/home'
+    this.router.navigate(['']);
+    localStorage.clear(); 
   }
 
   navegarEditar() {

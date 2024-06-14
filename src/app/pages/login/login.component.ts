@@ -4,6 +4,8 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, 
 import { Router } from '@angular/router';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { HttpClient } from '@angular/common/http';
+import { jwtDecode } from 'jwt-decode';
+
 
 
 
@@ -22,6 +24,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private http: HttpClient
+    
   ) {}
 
   ngOnInit() {
@@ -32,14 +35,19 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
+    
     if (this.loginForm.valid) {
       this.http.post('http://localhost:3001/login', this.loginForm.value, { responseType: 'text' })
         .subscribe({
           next: (token: string) => {
             // Armazena o token no localStorage
-            localStorage.setItem('token', token); 
-            //console.log(token);
             
+            localStorage.setItem('token', token); 
+            const decodedtoken:any = jwtDecode(token);
+            const userId:string = decodedtoken.id;
+            localStorage.setItem('userId', userId);
+
+
             this.router.navigateByUrl('painel');
           },
           error: (error) => {
@@ -53,6 +61,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  minhaFuncao(id:string){
+    //localStorage.removeItem('id')
+    localStorage.setItem('idUser',id)
+  }
   navegarSignup() {
     this.router.navigate(['signup']);
   }

@@ -8,11 +8,13 @@ import { map, Observable } from "rxjs";
 })
 
 export class UserService{
-    url: string = "http://localhost:3001/users/6668ef3bfa230c48d4a3a234";
+    url: string = "http://localhost:3001/users";
     constructor(private http: HttpClient){}
 
+
     getUser(){
-        return this.http.get<any>(this.url).pipe(
+        const userId = localStorage.getItem('userId')
+        return this.http.get<any>(this.url+"/"+userId).pipe(
             map((response)=>{
                 return response;
             })

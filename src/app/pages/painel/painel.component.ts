@@ -3,6 +3,7 @@ import { NavPainelComponent } from "../../components/nav-painel/nav-painel.compo
 import { ColecaoComponent } from "../colecao/colecao.component";
 import { CollectionService } from '../../service/collections.service'
 import { CardCollectionComponent } from 'src/app/components/card-collection/card-collection.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,9 +16,11 @@ import { CardCollectionComponent } from 'src/app/components/card-collection/card
 export class PainelComponent implements OnInit{
 
     listCollection:any;
-    router: any;
 
-    constructor(private service: CollectionService){}
+
+    constructor(private service: CollectionService,
+        private router: Router
+    ){}
 
     ngOnInit(): void {
         this.service.getCollections().subscribe({
@@ -33,5 +36,14 @@ export class PainelComponent implements OnInit{
         localStorage.setItem('idCollection',id)
     }
 
+    navAddcolecao() {
+        this.router.navigate(['colecao']);
+      }
+
+      
+    navAtuColecao() {
+        this.router.navigate(['atu-colecao']);
+      }
+    
 
 }

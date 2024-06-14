@@ -23,6 +23,7 @@ body {
     color: #000000; /* Cor do texto */
     letter-spacing: 4px; /* Espaçamento entre letras */
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+    background-color: #ffffff;
     margin-bottom: auto;
   }
   

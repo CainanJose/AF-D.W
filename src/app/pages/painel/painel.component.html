@@ -1,20 +1,23 @@
 <!-- <app-colecao></app-colecao> -->
 <app-nav-painel></app-nav-painel>
 <main class="painel-container">
-    <div class="nav-painel">
-        <div class="bem-vindo">
-            <h3 class="title">Olá, Caina Otario</h3>
+    <body>
+        <div class="nav-painel">
+            <div class="bem-vindo">
+                <h3 class="title">Olá! Bem vindo a sua Biblioteca!</h3>
+            </div>
+            <div class="nav-button-painel">
+                <button class="button-painel" (click)="navAddcolecao()">Adicionar Coleção</button>
+            </div>
         </div>
-        <div class="nav-button-painel">
-            <button class="button-painel">Adicionar Coleção</button>
-        </div>
-    </div>
+        
+        <div class="container" >
+            @for(collection of listCollection; track collection._id){
+                <app-card-collection name={{collection.name}} urlLink="todos-livros" (collectionClick)="minhaFuncao(collection._id)"></app-card-collection>
+            }
     
-    <div class="collection-area">
-        @for(collection of listCollection; track collection._id){
-            <app-card-collection name={{collection.name}} urlLink="colecao" (collectionClick)="minhaFuncao(collection._id)"></app-card-collection>
-        }
+        </div>
+    </body>
 
-    </div>
     
 </main>

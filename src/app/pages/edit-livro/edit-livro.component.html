@@ -29,11 +29,21 @@
                   </div>
                 </div>
 
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form3Example2" class="form-control" name="isbn"  [(ngModel)]="atuLivro.isbn"/>
+                  <label class="form-label" for="form3Example2">Isbn</label>
+                </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form3Example2" class="form-control"name="description"  [(ngModel)]="atuLivro.description" />
                   <label class="form-label" for="form3Example4">Descrição</label>
                 </div>
+
+                <div class="form-group">
+                  <label for="imagem">Selecione uma imagem:</label>
+                  <input type="file" id="imagem" (change)="onFileSelected($event)" class="form-control-file">
+                </div>
+
   
             
                 <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4"  >

@@ -12,31 +12,6 @@ import { CardSingleComponent } from 'src/app/components/card-single/card-single.
     styleUrl: './livro.component.css',
     imports: [NavPainelComponent,CardSingleComponent]
 })
-// export class LivroComponent implements OnInit{
-
-//   listBooks: any;
-
-//   constructor(private router: Router,
-//     private service: BookService
-//   ) {}
-
-//   ngOnInit(): void {
-//     this.service.getAllBooks().subscribe({
-//         next:((res)=>{
-//             this.listBooks = res              
-//             console.log(this.listBooks);
-//         })
-//     })
-// }
-
-//   navTodosLivros() {
-//     this.router.navigate(['todos-livros']); 
-//   }
-
-//   navEditarLivro() {
-//     this.router.navigate(['edit-livro']); 
-//   }
-// }
 
 export class LivroComponent implements OnInit {
   
@@ -47,10 +22,13 @@ export class LivroComponent implements OnInit {
   ngOnInit(): void {
     this.service.getBook().subscribe({
         next:((res)=>{
-            this.books = res              
-            console.log(this.books);
+            this.books = res 
+            if (this.books.image && !this.books.image.startsWith('data:image')) {
+              this.books.image = `data:image/png;base64,${this.books.image}`;
+            }             
+            console.log(this.books.image);
         })
-    })
+    });
 
 }
   navTodosLivros() {

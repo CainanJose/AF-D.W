@@ -55,6 +55,8 @@ export class EditarComponent implements OnInit {
 
   atualizarUser():void { 
     if (confirm('Deseja realmente atualizar este livro?')){
+      console.log(this.atuUser.password);
+      
     this.service.atualizaUser(this.atuUser)}
   }
 
@@ -63,5 +65,9 @@ export class EditarComponent implements OnInit {
       this.service.deleteUser()}
   }
 
-  
+  navPainel() {
+    this.router.navigate(['painel']);
+  }
 }
+
+  

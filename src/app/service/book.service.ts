@@ -28,7 +28,7 @@ export class BookService{
 
     criarLivro(livro: any) { 
         const idCollection = localStorage.getItem('idCollection')
-        this.http.post('http://localhost:3001/collections'+"/"+idCollection+"/books", JSON.stringify(livro), {
+        this.http.post('http://localhost:3001/collections'+"/"+idCollection+"/books", livro, {
           headers: new HttpHeaders({ 'Content-Type': 'application/json' })
         }).subscribe({
           next: () => {

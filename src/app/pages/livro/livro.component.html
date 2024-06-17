@@ -2,12 +2,13 @@
 
 <!DOCTYPE html>
 <html>
-  <app-card-single title={{books.title}} author={{books.author}} description={{books.description}} urlLink="edit-livro"></app-card-single>
-
+  <body>
+    <app-card-single
+      [title]="books.title"
+      [author]="books.author"
+      [description]="books.description"
+      [isbn]="books.isbn"
+      [image]="books.image">
+    </app-card-single>
+  </body>
 </html>
-
-
-
-
-
-

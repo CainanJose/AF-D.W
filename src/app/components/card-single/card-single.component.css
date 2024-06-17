@@ -8,3 +8,8 @@ body {
     
 }
 
+.card-img-top {
+    align-self: center; /* Centraliza verticalmente */
+    object-fit: cover;  /* Mantém a proporção da imagem e a cobre totalmente */
+  }
+

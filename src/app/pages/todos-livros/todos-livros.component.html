@@ -15,7 +15,7 @@
     
     <div class="collection-area">
         @for(books of listBooks; track books._id){
-            <app-card-book title={{books.title}} author={{books.author}} description={{books.description}} urlLink="livro"(booksClick)="minhaFuncao(books._id)"></app-card-book>
+            <app-card-book title={{books.title}} author={{books.author}} urlLink="livro"(booksClick)="minhaFuncao(books._id)"></app-card-book>
         }
 
     </div>

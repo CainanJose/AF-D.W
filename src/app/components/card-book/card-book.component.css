@@ -1,0 +1,12 @@
+/* card-single.component.css */
+a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit;        /* Mantém a cor original do texto */
+  }
+  
+  /* Opcional: Adicione estilos para indicar que é um link */
+  a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    cursor: pointer;            /* Muda o cursor para indicar que é clicável */
+  }
+  

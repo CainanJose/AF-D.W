@@ -18,7 +18,9 @@ export class EditLivroComponent implements OnInit {
   atuLivro = {
     title: '',
     author:'',
-    description:''
+    description:'',
+    image: '',
+    isbn:''
      };
      
      constructor(private service: BookService, private router: Router, private http: HttpClient) {}
@@ -30,12 +32,25 @@ export class EditLivroComponent implements OnInit {
            this.atuLivro = {
              title: this.books.title,
              author: this.books.author,
-             description: this.books.description
+             description: this.books.description,
+             image: this.books.image,
+             isbn: this.books.isbn
            };
          },
          error: (err) => console.error(err)
        });
      }
+
+     onFileSelected(event: any) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+  
+      reader.onload = () => {
+        this.atuLivro.image = reader.result as string; // Atribui a string Base64
+      };
+  
+      reader.readAsDataURL(file);
+    }
     
       dele(): void{
         if (confirm('Deseja realmente deletar este livro?')){
@@ -44,7 +59,7 @@ export class EditLivroComponent implements OnInit {
 
   
      atualizar() { 
-      if (confirm('Deseja realmente deletar este livro?')){
+      if (confirm('Deseja realmente atualizar este livro?')){
       this.service.atualizar(this.atuLivro)}
     }
 

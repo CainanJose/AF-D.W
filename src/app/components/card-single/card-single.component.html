@@ -11,16 +11,13 @@
               <div class="card mb-3 container text-center " style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
-                      alt="Trendy Pants and Shoes"
-                      class="img-fluid rounded-start"
-                    />
+                    <img *ngIf="image" [src]="safeImageUrl" alt="Capa do Livro" class="img-fluid rounded-start card-img-top">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h3 class="card-title">{{ title }}</h3>
                       <h5 class="card-title">{{ author }}</h5>
+                      <p class="card-title">{{ isbn }}</p>
                       <p class="card-text">
                         {{ description }}.
                       </p>

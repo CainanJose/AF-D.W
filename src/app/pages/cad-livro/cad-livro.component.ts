@@ -23,8 +23,21 @@ export class CadLivroComponent {
     newLivro = {
       title: '',
       author:'',
-      description:''
+      description:'',
+      image: '',
+      isbn:''
        };
+
+       onFileSelected(event: any) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+    
+        reader.onload = () => {
+          this.newLivro.image = reader.result as string; // Atribui a string Base64
+        };
+    
+        reader.readAsDataURL(file);
+      }
       
       criarLivro() { 
         this.service.criarLivro(this.newLivro)

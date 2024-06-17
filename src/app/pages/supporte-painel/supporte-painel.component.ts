@@ -9,5 +9,5 @@ import { NavPainelComponent } from "../../components/nav-painel/nav-painel.compo
     imports: [NavPainelComponent]
 })
 export class SupportePainelComponent {
-
+    teste ='@'
 }

@@ -14,6 +14,7 @@ import { CardBookComponent } from 'src/app/components/card-book/card-book.compon
 export class TodosLivrosComponent implements OnInit {
   
     listBooks: any;
+    
 
 
     constructor(private service: BookService,private router: Router) {}
@@ -22,7 +23,6 @@ export class TodosLivrosComponent implements OnInit {
       this.service.getAllBooks().subscribe({
           next:((res)=>{
               this.listBooks = res              
-              console.log(this.listBooks);
           })
       })
   }

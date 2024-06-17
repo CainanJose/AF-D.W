@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavPainelComponent } from "../../components/nav-painel/nav-painel.component";
 import { UserService } from 'src/app/service/user.service';
+import * as bcrypt from 'bcryptjs';
+
 
 @Component({
   selector: 'app-editar',
@@ -53,11 +55,11 @@ export class EditarComponent implements OnInit {
     });
   }
 
-  atualizarUser():void { 
+  async atualizarUser():Promise<void> { 
     if (confirm('Deseja realmente atualizar este livro?')){
       console.log(this.atuUser.password);
-      
-    this.service.atualizaUser(this.atuUser)}
+      this.atuUser.password = await bcrypt.hash(this.atuUser.password, 10);
+      this.service.atualizaUser(this.atuUser)}
   }
 
   deleteUser(): void{

@@ -4,6 +4,7 @@ import { ColecaoComponent } from "../colecao/colecao.component";
 import { CollectionService } from '../../service/collections.service'
 import { CardCollectionComponent } from 'src/app/components/card-collection/card-collection.component';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/service/user.service';
 
 
 @Component({
@@ -17,9 +18,14 @@ export class PainelComponent implements OnInit{
 
     listCollection:any;
 
+    user = {
+        name: '',
+         };
+    
 
     constructor(private service: CollectionService,
-        private router: Router
+        private router: Router,
+        private usuario: UserService
     ){}
 
     ngOnInit(): void {
@@ -29,11 +35,24 @@ export class PainelComponent implements OnInit{
                 console.log(this.listCollection);
             })
         })
+
+        this.usuario.getUser().subscribe({
+            next: (res) => {
+              this.user = res;
+              
+              this.user = {
+                name: this.user.name,
+              };
+              
+            },
+            error: (err) => console.error(err)
+          });
     }
 
-    minhaFuncao(id:string){
+    minhaFuncao(id:string, name:string){
         //localStorage.removeItem('id')
         localStorage.setItem('idCollection',id)
+        localStorage.setItem('nomeColecao',name)
     }
 
     navAddcolecao() {

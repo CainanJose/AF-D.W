@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavPainelComponent } from "../../components/nav-painel/nav-painel.component";
 import { Router } from '@angular/router';
 import { BookService } from 'src/app/service/book.service';
 import { CardBookComponent } from 'src/app/components/card-book/card-book.component';
+import { CollectionService } from '../../service/collections.service'
 
 @Component({
     selector: 'app-todos-livros',
@@ -14,18 +15,23 @@ import { CardBookComponent } from 'src/app/components/card-book/card-book.compon
 export class TodosLivrosComponent implements OnInit {
   
     listBooks: any;
+    collectionName: string | null = null;
+    
     
 
+    constructor(private service: BookService,private router: Router, private collection: CollectionService) {}
 
-    constructor(private service: BookService,private router: Router) {}
-
+    
     ngOnInit(): void {
+      this.collectionName = localStorage.getItem('nomeColecao');
       this.service.getAllBooks().subscribe({
           next:((res)=>{
               this.listBooks = res              
           })
       })
-  }
+      
+    }
+
 
       minhaFuncao(id:string): void{
         //localStorage.removeItem('idlivro')

@@ -11,7 +11,7 @@ import { Observable, map } from "rxjs";
 
 export class CollectionService{
 
-    atuColecao= {
+    colecao= {
         name: '',
          };
     
@@ -27,10 +27,10 @@ export class CollectionService{
             map((response)=>{
                 console.log(response);
                 return response;
-                
             })
         )
     }
+
 
     // getCollecSingle():Observable<any>{
     //     const idCollection = localStorage.getItem('idCollection')

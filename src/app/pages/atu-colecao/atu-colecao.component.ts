@@ -41,6 +41,7 @@ export class AtuColecaoComponent implements OnInit {
   atualizarColecao(){
     if (confirm('Deseja realmente atualizar essa coleção?')){
       this.service.atualizar(this.newCollection)
+      localStorage.setItem('nomeColecao',this.newCollection.name)
     }
     
   }

@@ -6,6 +6,7 @@
     <h3>Adicionar Coleção</h3>
   </div>
   <body>
+    <br>
     <div class="row gx-lg-5 align-items-center mb-5 justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
           <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
@@ -13,7 +14,7 @@
     
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-
+              <label class="form-label" for="form3Example1">Título</label>
               <form (ngSubmit)="atualizarColecao()"> 
                 <div class="row">
                   <div class="col-md-6 mb-4">
@@ -25,7 +26,6 @@
                         name="name"
                         [(ngModel)]="newCollection.name"  
                       />
-                      <label class="form-label" for="form3Example1">Título</label>
                     </div>
                   </div>
                 </div>

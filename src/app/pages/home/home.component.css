@@ -1,29 +1,29 @@
 body {
-    background-image: url("../../../assets/home.png");
-    background-size: auto; /* Mantém o tamanho real da imagem */
+    background-image: url("../../../assets/homenew2.png");
+    background-size: 100%; /* Mantém o tamanho real da imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
-    background-color: #cccccc; /* Cor de fundo como fallback */
-    min-height: 89vh; /* Garante altura mínima de 89% da viewport */
+    background-color: #064974; /* Cor de fundo como fallback */
+    min-height: 100vh; /* Garante altura mínima de 89% da viewport */
     background-attachment: fixed; /* Mantém a imagem fixa no fundo ao rolar a página */
 }
 
 
 h1 {
     font-family:  'Times New Roman', Times, serif; /* Use 'Boston Angel' se estiver disponível */
-    font-size: 3em; /* Tamanho maior do texto */
+    font-size: 4.5em; /* Tamanho maior do texto */
     font-weight: bolder; /* Negrito mais forte */
-    color: #0E6EFD; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     text-transform: uppercase; /* Tudo em maiúsculas */
     letter-spacing: 4.5px; /* Espaçamento entre letras */
-    text-shadow: 2px 2px 4px rgba(95, 95, 95, 0.4); /* Sombra do texto */
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 0.4); /* Sombra do texto */
 
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1em; /* Tamanho padrão do texto */
-    color: #000000; /* Cor do texto */
+    font-size: 1.5em; /* Tamanho padrão do texto */
+    color: #ffffff; /* Cor do texto */
     line-height: 0.5; /* Altura da linha para melhor legibilidade */
     text-transform: uppercase;
     letter-spacing: 4.5px; /* Espaçamento entre letras */

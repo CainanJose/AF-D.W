@@ -1,10 +1,9 @@
 body {
-    background-image: url("../../../assets/home5.png");
+    background-image: url("../../../assets/homenew1.png");
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
-    background-attachment: fixed;
-    background-color: #cccccc; /* Cor de fundo como fallback */
+    background-color: #1ec0d7; /* Cor de fundo como fallback */
     min-height: 100vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
     font-weight: bold;
@@ -15,6 +14,7 @@ body {
     align-items: center;
     background-color: #ffffff;
     border-radius: 40%;
+
   }
 
   h3{
@@ -27,9 +27,39 @@ body {
     margin-bottom: auto;
   }
   
-
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #144d74;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   
-
+  .btn:hover {
+    background-color: #1dc0d7;
+  }
+  
+  .btn-primary {
+    margin: 0 10px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333333;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
   
 
   

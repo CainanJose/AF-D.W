@@ -1,8 +1,9 @@
 <app-nav-painel></app-nav-painel>
 <!DOCTYPE html>
 <section >
+  <body>
     <div class="text-center my-4">
-            <h3>Editar livro</h3>
+            <h3>Editar usuário</h3>
     </div>
       <div class="row gx-lg-5 align-items-center mb-5 justify-content-center ">
         <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
@@ -17,37 +18,37 @@
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" name="name" [(ngModel)]="atuUser.name"/>
                       <label class="form-label" for="form3Example1">Nome</label>
+                      <input type="text" id="form3Example1" class="form-control" name="name" [(ngModel)]="atuUser.name"/>
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" name="lastname" [(ngModel)]="atuUser.lastname" />
                       <label class="form-label" for="form3Example2">Sobrenome</label>
+                      <input type="text" id="form3Example2" class="form-control" name="lastname" [(ngModel)]="atuUser.lastname" />
                     </div>
                   </div>
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="form3Example2" class="form-control"name="email" [(ngModel)]="atuUser.email" />
                   <label class="form-label" for="form3Example4">Email</label>
+                  <input type="email" id="form3Example2" class="form-control"name="email" [(ngModel)]="atuUser.email" />
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example2" class="form-control"name="password" [(ngModel)]="atuUser.password" />
                   <label class="form-label" for="form3Example4">Senha</label>
+                  <input type="password" id="form3Example2" class="form-control"name="password" [(ngModel)]="atuUser.password" />
                 </div>
             
                 <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4"  >
                     Salvar
                 </button>
-                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4" style="background-color: #02135c;" (click)="navPainel()" >
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4"  (click)="navPainel()" >
                     Voltar
                 </button>
 
-                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4" style="background-color: #02135c;" (click)="deleteUser()" >
-                  deletar
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4"  (click)="deleteUser()" >
+                  Deletar
                </button>
               
    
@@ -56,6 +57,7 @@
           </div>
         </div>
       </div>
+    </body>
   </section>
   <!-- Section: Design Block -->
   

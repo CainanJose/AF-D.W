@@ -1,24 +1,22 @@
 <app-navbar></app-navbar>
-
 <!DOCTYPE html>
 <body>
-<section class="h-100 gradient-form" style="background-color: #eee;">
+<section class="h-100 gradient-form">
     <div class="container py-2 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-xl-10" >
+        <div class="col-xl-10">
           <div class="card rounded-3 text-black">
             <div class="row g-0">
-              <div class="col-lg-6">
-                  <div class="card-body md-5 mx-md-4">
-  
+              <div class="col-lg-6 d-flex align-items-center">
+                <div class="card-body md-5 mx-md-4">
                   <div class="text-center"> 
                     <img src="https://img.freepik.com/vetores-premium/vetor-de-icone-de-design-de-logotipo-de-livro_9850-5270.jpg"
                       style="width: 185px;" alt="logo">
                     <h3 class="mt-1 mb-5 pb-1">Book Shelf</h3>
                   </div>
-  
+
                   <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-                    <div  class="text-center">
+                    <div class="text-center">
                       <p>Faça login em sua conta</p>
                     </div>
                     <br>
@@ -39,20 +37,14 @@
                       <label class="form-label mt-1" for="form2Example22"></label>
                     </div>
                   
-                    <div class="text-center pt-1 mb-2 pb-1">
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" [disabled]="!loginForm.valid">Login</button>
+                    <div class="d-flex justify-content-center align-items-center mt-4">
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary me-2" [disabled]="!loginForm.valid">Login</button>
                       <div *ngIf="invalidUser" class="alert alert-danger my-1" role="alert">
                         Email ou senha incorretos.
                       </div>
-                    </div>
-                  
-                    <div class="d-flex align-items-center justify-content-center pb-4 ">
-                      <p class="mb-0 me-2">Não tem uma conta?</p>
                       <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary" (click)="navegarSignup()">Crie um novo</button>
                     </div>
                   </form>
-                  
-  
                 </div>
               </div>
               <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
@@ -68,4 +60,3 @@
     </div>
   </section>
 </body>
-

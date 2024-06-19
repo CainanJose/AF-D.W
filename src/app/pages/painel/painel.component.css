@@ -22,37 +22,50 @@
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: rgb(30, 75, 189);
+  background-color: #1ec0d7;
 }
 
 body {
-  background-image: url("../../../assets/home5.png");
+  background-image: url("../../../assets/homenew3.png");
   background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
-  background-repeat: no-repeat; /* Não repete a imagem */
   background-position: center center; /* Centraliza a imagem */
   background-attachment: fixed;
-  background-color: #cccccc; /* Cor de fundo como fallback */
   min-height: 100vh; /* Garante altura mínima de 100% da viewport */
   font-family:  'Times New Roman', Times, serif; 
   font-weight: bold;
-}
-.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 40%;
-}
-
-h3{
   font-family:  'Times New Roman', Times, serif; 
   font-size: 1.5em; /* Tamanho maior do texto */
   color: #ffffff; /* Cor do texto */
   letter-spacing: 4px; /* Espaçamento entre letras */
   text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
-  background-color: #315af1;
+  background-color: #1ec0d7;
   margin-bottom: auto;
+  padding: 10px 24px;
 }
+
+.button-painel {
+  padding: 10px 20px; /* Padding interno */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: #ffffff; /* Cor do texto */
+  background-color: #1ec0d7; /* Cor de fundo */
+  border: 2px solid #1ec0d7; /* Borda com cor correspondente */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Cursor ao passar por cima */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+.button-painel:hover {
+  background-color: #0d3050; /* Mudança de cor de fundo ao passar o mouse */
+  border-color: #0d3050; /* Mudança de cor da borda ao passar o mouse */
+}
+
+
+
 
 
 

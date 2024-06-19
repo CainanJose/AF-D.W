@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <section >
+<body>
     <div class="text-center my-4">
             <h3>Editar livro</h3>
     </div>
@@ -17,26 +17,26 @@
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" name="title" [(ngModel)]="atuLivro.title"/>
                       <label class="form-label" for="form3Example1">Titulo</label>
+                      <input type="text" id="form3Example1" class="form-control" name="title" [(ngModel)]="atuLivro.title"/>
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" name="author"  [(ngModel)]="atuLivro.author"/>
                       <label class="form-label" for="form3Example2">Autor</label>
+                      <input type="text" id="form3Example2" class="form-control" name="author"  [(ngModel)]="atuLivro.author"/>
                     </div>
                   </div>
                 </div>
 
                 <div data-mdb-input-init class="form-outline">
-                  <input type="text" id="form3Example2" class="form-control" name="isbn"  [(ngModel)]="atuLivro.isbn"/>
                   <label class="form-label" for="form3Example2">Isbn</label>
+                  <input type="text" id="form3Example2" class="form-control" name="isbn"  [(ngModel)]="atuLivro.isbn"/>
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="form3Example2" class="form-control"name="description"  [(ngModel)]="atuLivro.description" />
                   <label class="form-label" for="form3Example4">Descrição</label>
+                  <input type="text" id="form3Example2" class="form-control"name="description"  [(ngModel)]="atuLivro.description" />
                 </div>
 
                 <div class="form-group">
@@ -49,20 +49,21 @@
                 <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4"  >
                     Salvar
                 </button>
-                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4" style="background-color: #02135c;" (click)="navLivros()" >
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4" (click)="navLivros()" >
                     Voltar
                 </button>
 
-                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4" style="background-color: #02135c;" (click)="dele()" >
-                  deletar
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block m-4"  (click)="dele()" >
+                  Deletar
                </button>
-              
    
               </form>
             </div>
           </div>
         </div>
       </div>
+    </body>
   </section>
+  
   <!-- Section: Design Block -->
   

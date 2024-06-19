@@ -1,19 +1,62 @@
-body{
-    background-image: url("../../../assets/home2.png");
+body {
+    background-image: url("../../../assets/homenew1.png");
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
-    background-attachment: fixed;
-    background-color: #cccccc; /* Cor de fundo como fallback */
-    
+    background-color: #064974; /* Cor de fundo como fallback */
+    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
+    font-weight: bold;
 }
 
-h3{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #064974;
+    border-radius: 40%;
+  }
+
+  h3{
     font-family:  'Times New Roman', Times, serif; 
-    font-size: 2em; /* Tamanho maior do texto */
+    font-size: 1.8em; /* Tamanho maior do texto */
     color: #000000; /* Cor do texto */
     letter-spacing: 4px; /* Espaçamento entre letras */
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
     background-color: #ffffff;
+    margin-bottom: auto;
+    padding-bottom: 20px;
+  }
+
+  
+/* Estilo base para os botões */
+.btn {
+    padding: 12px 24px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    text-align: center;
 }
+
+/* Estilo para o botão 'Salvar' */
+.btn-primary {
+    background-color: #064974;
+}
+
+.btn-primary:hover {
+    background-color: #1ec0d7;
+    transform: scale(1.01);
+}
+
+/* Estilo para os botões 'Voltar' e 'Deletar' */
+.btn-secondary {
+    background-color: #02135c;
+}
+
+.btn-secondary:hover {
+    background-color: #1ec0d7;
+    transform: scale(1.05);
+}
+
+

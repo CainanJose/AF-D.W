@@ -1,22 +1,24 @@
 body {
-    background-image: url("../../../assets/home4.png");
+    background-image: url("../../../assets/homenew1.png");
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
-    min-height: 89vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
     color: #000000;
+    
 }
 
 h3{
     font-family:  'Times New Roman', Times, serif; 
     font-size: 1.6em; /* Tamanho maior do texto */
-    color: #000000; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     letter-spacing: 2px; /* Espaçamento entre letras */
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
-    background-color: #ffffff;
+    background-color: #064974;
     margin-bottom: auto;
+    padding: 10px 24px;
 }
 
-  
-  
+
+

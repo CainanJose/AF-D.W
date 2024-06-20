@@ -28,11 +28,20 @@
     background-color: rgb(30, 75, 189);
   }
   
-  /* .collection-area{
-    margin: 8px;
-    padding: 8px;
-    background-color: rgb(10, 70, 235);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-  } */
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #144d74;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #1dc0d7;
+  }
+  
+  .btn-primary {
+    margin: 0 10px;
+  }

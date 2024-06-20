@@ -30,7 +30,7 @@ body {
   background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
   background-position: center center; /* Centraliza a imagem */
   background-attachment: fixed;
-  min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+  min-height: 89vh; /* Garante altura mínima de 100% da viewport */
   font-family:  'Times New Roman', Times, serif; 
   font-weight: bold;
   display: flex;
@@ -60,10 +60,18 @@ body {
 }
 
 .button-painel:hover {
-  background-color: #0d3050; /* Mudança de cor de fundo ao passar o mouse */
-  border-color: #0d3050; /* Mudança de cor da borda ao passar o mouse */
+  background-color: #107ce1; /* Mudança de cor de fundo ao passar o mouse */
+  border-color: #107ce1; /* Mudança de cor da borda ao passar o mouse */
 }
 
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
 
 
 

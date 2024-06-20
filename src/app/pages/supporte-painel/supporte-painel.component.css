@@ -3,7 +3,7 @@ body {
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 89.7vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
     color: #000000;
     

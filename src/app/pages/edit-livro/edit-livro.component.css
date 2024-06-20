@@ -22,10 +22,10 @@ body {
     font-size: 1.8em; /* Tamanho maior do texto */
     color: #000000; /* Cor do texto */
     letter-spacing: 4px; /* Espaçamento entre letras */
-    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+    text-shadow: 2px 2px 3px rgba(173, 173, 173, 0.4);
     background-color: #ffffff;
     margin-bottom: auto;
-    padding-bottom: 20px;
+    padding-bottom: 9px;
   }
 
   

@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
     background-color: #1ec0d7; /* Cor de fundo como fallback */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 84.2vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
     font-weight: bold;
 }

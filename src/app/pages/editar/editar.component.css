@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
     background-color: #064974; /* Cor de fundo como fallback */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 88.5vh; /* Garante altura mínima de 100% da viewport */
     font-family:  'Times New Roman', Times, serif; 
     font-weight: bold;
 }
@@ -25,7 +25,7 @@ body {
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
     background-color: #ffffff;
     margin-bottom: auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   

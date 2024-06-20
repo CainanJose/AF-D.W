@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../../assets/homenew1.png");
+    background-image: url("../../../assets/homenew4.png");
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
@@ -12,10 +12,10 @@ body {
 h3{
     font-family:  'Times New Roman', Times, serif; 
     font-size: 1.6em; /* Tamanho maior do texto */
-    color: #ffffff; /* Cor do texto */
+    color: #474747; /* Cor do texto */
     letter-spacing: 2px; /* Espaçamento entre letras */
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
-    background-color: #064974;
+    background-color: #ffffff;
     margin-bottom: auto;
     padding: 10px 24px;
 }

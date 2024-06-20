@@ -1,32 +1,53 @@
 body {
-    background-image: url("../../../assets/home5.png");
-    background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-position: center center; /* Centraliza a imagem */
-    background-attachment: fixed;
-    background-color: #cccccc; /* Cor de fundo como fallback */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
-    font-family:  'Times New Roman', Times, serif; 
-    font-weight: bold;
+  background-image: url("../../../assets/homenew3.png");
+  background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
+  background-position: center center; /* Centraliza a imagem */
+  background-attachment: fixed;
+  min-height: 89vh; /* Garante altura mínima de 100% da viewport */
+  font-family:  'Times New Roman', Times, serif; 
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  font-family:  'Times New Roman', Times, serif; 
+  font-size: 1.5em; /* Tamanho maior do texto */
+  color: #ffffff; /* Cor do texto */
+  letter-spacing: 4px; /* Espaçamento entre letras */
+  text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+  background-color: #1ec0d7;
+  margin-bottom: auto;
+  padding: 10px 24px;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 40%;
-  }
 
   h3{
     font-family:  'Times New Roman', Times, serif; 
     font-size: 1.5em; /* Tamanho maior do texto */
-    color: #000000; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     letter-spacing: 4px; /* Espaçamento entre letras */
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
     margin-bottom: auto;
   }
   
 
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0a9af9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #107ce1; /* Mudança de cor de fundo ao passar o mouse */
+    border-color: #107ce1; /* Mudança de cor da borda ao passar o mouse */
+  }
+  
+  .btn-primary {
+    margin: 0 10px;
+  }
   
 
   

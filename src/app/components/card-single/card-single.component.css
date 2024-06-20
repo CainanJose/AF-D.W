@@ -1,10 +1,10 @@
 body {
-    background-image: url("../../../assets/374b6cf334b911685e21b0e4b62dfd3e.jpg");
+    background-image: url("../../../assets/home.png");
     background-size: cover; /* Cobre toda a tela, pode cortar a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center center; /* Centraliza a imagem */
     background-color: #cccccc; /* Cor de fundo como fallback */
-    min-height: 100vh; /* Garante altura mínima de 100% da viewport */
+    min-height: 89vh; /* Garante altura mínima de 100% da viewport */
     
 }
 
@@ -12,4 +12,23 @@ body {
     align-self: center; /* Centraliza verticalmente */
     object-fit: cover;  /* Mantém a proporção da imagem e a cobre totalmente */
   }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #144d74;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #1dc0d7;
+  }
+  
+  .btn-primary {
+    margin: 0 10px;
+  }
+  
 

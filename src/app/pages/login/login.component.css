@@ -13,6 +13,21 @@ h3 {
     font-size: 2.6em;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
+    padding-bottom: 20px;body {
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: #ffffff71;
+}
+
+.gradient-custom-2 {
+    background: #0d3050;
+    margin: none;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 2.6em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(173, 173, 173, 0.4);
     padding-bottom: 20px;
 }
 
@@ -57,9 +72,82 @@ h4{
 .d-flex p {
     font-size: 1.1em;
     color: white;
-    background-color: #1ec0d7;
-    padding: 2px 24px;
+    background-color: #0d3050;
+
 }
+
+.btn-outline-primary {
+    padding: 10px 20px;
+    border: 2px solid #1dc0d7;
+    border-radius: 5px;
+    color: #1dc0d7;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #1dc0d7;
+    color: white;
+    transform: scale(1.05);
+}
+
+.alert-above {
+    position: absolute;
+    top: -40px; 
+    transform: translateY(-100%);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .position-relative-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
+h4{
+    font-size: 2.8em;
+    letter-spacing: 2.8px;
+}
+
+.btn {
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background-color: #064974;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1ec0d7;
+    transform: scale(1.01);
+}
+
+.btn-secondary {
+    background-color: #02135c;
+    color: white; /* Ajusta a cor do texto */
+}
+
+.btn-secondary:hover {
+    background-color: #1ec0d7;
+    transform: scale(1.05);
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+
 
 .btn-outline-primary {
     padding: 10px 20px;

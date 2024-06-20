@@ -15,10 +15,10 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h3 class="card-title">{{ title }}</h3>
-                      <h5 class="card-title">{{ author }}</h5>
-                      <p class="card-title">{{ isbn }}</p>
-                      <p class="card-text">
+                      <h3 class="card-title">Titulo: {{ title }}</h3>
+                      <h5 class="card-title">Autor: {{ author }}</h5>
+                      <p class="card-title">Codigo Isbn: {{ isbn }}</p>
+                      <p class="card-text">Descrição: 
                         {{ description }}.
                       </p>
                     </div>
@@ -27,9 +27,9 @@
               </div>
             
               <div class="container text-center">
-                <button type="button" class="btn btn-primary m-3 " style="background-color: #0323b3;" data-mdb-ripple-init (click)="navTodosLivros()">Voltar</button>
+                <button type="button" class="btn btn-primary m-3 "  data-mdb-ripple-init (click)="navTodosLivros()">Voltar</button>
             
-                 <button type="button" class="btn btn-primary m-3" style="background-color: #0323b3;" data-mdb-ripple-init (click)="navEditarLivro()">Editar</button>
+                 <button type="button" class="btn btn-primary m-3"  data-mdb-ripple-init (click)="navEditarLivro()">Editar</button>
               </div>
             </div>
           </body>

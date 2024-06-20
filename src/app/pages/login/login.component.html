@@ -37,11 +37,14 @@
                       <label class="form-label mt-1" for="form2Example22"></label>
                     </div>
                   
-                    <div class="d-flex justify-content-center align-items-center mt-4">
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary me-2" [disabled]="!loginForm.valid">Login</button>
+                    <div class="text-center pt-1 mb-2 pb-1">
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block" [disabled]="!loginForm.valid">Login</button>
                       <div *ngIf="invalidUser" class="alert alert-danger my-1" role="alert">
                         Email ou senha incorretos.
                       </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center pb-4 ">
+                      <p class="mb-0 me-2">Não tem uma conta?</p>
                       <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary" (click)="navegarSignup()">Crie um novo</button>
                     </div>
                   </form>
